@@ -556,6 +556,10 @@ a {
 
 .material-preview {
   display: grid;
+.format-switch-short {
+  display: none;
+}
+
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2.5rem;
   align-items: center;

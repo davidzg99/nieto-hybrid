@@ -41,7 +41,8 @@ function ServicePage() {
                   to={`/servicios/${item.slug}/${specialtySlug}`}
                   className={`format-switch-item ${item.slug === format ? 'is-active' : ''}`}
                 >
-                  {item.title}
+                  <span className="format-switch-full">{item.title}</span>
+                  <span className="format-switch-short">{item.shortTitle}</span>
                 </Link>
               ))}
             </div>
