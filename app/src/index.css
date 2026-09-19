@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 :root {
-  font-family: Inter, 'Segoe UI', sans-serif;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: #101010;
@@ -22,6 +24,7 @@ body {
   margin: 0;
   min-width: 320px;
   background: #f7f4ef;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
 }
 
 img {
