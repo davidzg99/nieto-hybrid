@@ -14,6 +14,7 @@ import galleryNine from '../../img/image-15.jpeg'
 
 const navLinks = [
   { label: 'Servicios', href: '#servicios' },
+  { label: 'Especialidades', href: '#especialidades' },
   { label: 'Proceso', href: '#proceso' },
   { label: 'Reseñas', href: '#reseñas' },
   { label: 'Galería', href: '#galeria' },
@@ -38,9 +39,62 @@ const services = [
   },
 ]
 
+const specialties = [
+  {
+    title: 'Entrenamientos funcionales',
+    text: 'Movilidad, fuerza, resistencia y coordinación en entrenamientos completos y variados.',
+  },
+  {
+    title: 'Hyrox programado',
+    text: 'Entrenamientos de Hyrox en el gimnasio. Técnica y preparación específica para mejorar tu rendimiento.',
+  },
+  {
+    title: 'Hybrid WOD',
+    text: 'Endurance y preparación de carreras. Sesiones diseñadas para desarrollar tu capacidad aeróbica, resistencia y rendimiento en competición.',
+  },
+  {
+    title: 'Todos los niveles',
+    text: 'Tanto si estás empezando como si quieres competir, aquí tienes tu sitio.',
+  },
+]
+
+const groupBenefits = [
+  {
+    title: 'Grupos reducidos y atención personalizada',
+    text: 'Entrena en un entorno cercano donde el entrenador puede estar más encima de ti.',
+  },
+  {
+    title: 'Progresión real semana a semana',
+    text: 'Entrenamientos planificados con una progresión estructurada para que sigas mejorando de forma constante.',
+  },
+  {
+    title: 'Entrenamientos variados y efectivos',
+    text: 'Fuerza, acondicionamiento, movilidad y más, siempre con un propósito.',
+  },
+  {
+    title: 'Comunidad real',
+    text: 'Gente comprometida, mismo objetivo y buen ambiente en cada sesión.',
+  },
+]
+
+const philosophyPoints = [
+  {
+    title: 'Planificación inteligente',
+    text: 'Entrenamientos diseñados para ti y tus objetivos. Sin improvisaciones.',
+  },
+  {
+    title: 'Resultados reales',
+    text: 'Progresión constante, medible y sostenible en el tiempo.',
+  },
+  {
+    title: 'Entrena mejor, vive mejor',
+    text: 'Más rendimiento, menos lesiones y una relación sana con el entrenamiento.',
+  },
+]
+
 const steps = [
-  'Nos comentas tus objetivos y disponibilidad.',
-  'Te contactamos por WhatsApp o llamada para valorar tu caso.',
+  'Rellenas el cuestionario con tus objetivos y disponibilidad.',
+  'Revisamos tus respuestas y te contactamos para valorar tu caso.',
   'Diseñamos el plan perfecto para que empieces con claridad.',
 ]
 
@@ -81,13 +135,21 @@ const galleryImages = [
 ]
 
 const mapsUrl = 'https://www.google.com/maps/place/Nieto+Hybrid+Training+Lab/@39.6160793,2.7632758,17z/data=!3m1!4b1!4m6!3m5!1s0x129795b3d18ff7bb:0xcddefd36e0171933!8m2!3d39.6160752!4d2.7658507!16s%2Fg%2F11nv9p9_98?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D'
-const whatsappLink = 'https://wa.me/34601533539'
+const formLink = 'https://succulent-nebula-1e0.notion.site/317c2dd65fbc81c18c0df788dd3ffeee?pvs=105'
+
+const heroImages = [
+  { src: frontGym, alt: 'Vista exterior del gimnasio Nieto Hybrid Training Lab', badgeTitle: 'Grupos reducidos', badgeText: 'Trato cercano y personalizado' },
+  { src: galleryFour, alt: 'Gimnasio moderno en Marratxí, Pòrtol', badgeTitle: 'Instalaciones modernas', badgeText: 'Equipamiento completo y cuidado' },
+  { src: gallerySeven, alt: 'Ambiente motivador del centro', badgeTitle: 'Buen ambiente', badgeText: 'Comunidad cercana y motivadora' },
+  { src: galleryNine, alt: 'Espacio del gimnasio', badgeTitle: 'Espacio amplio', badgeText: 'Todo lo necesario para entrenar' },
+]
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [selectedImage, setSelectedImage] = useState(null)
   const [reviewIndex, setReviewIndex] = useState(0)
   const [timeLeft, setTimeLeft] = useState(10)
+  const [heroIndex, setHeroIndex] = useState(0)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -102,6 +164,14 @@ function App() {
     }, 1000)
 
     return () => clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    const heroTimer = setInterval(() => {
+      setHeroIndex((current) => (current + 1) % heroImages.length)
+    }, 5000)
+
+    return () => clearInterval(heroTimer)
   }, [])
 
   const visibleReviews = [...reviews.slice(reviewIndex, reviewIndex + 5), ...reviews.slice(0, Math.max(0, reviewIndex + 5 - reviews.length))]
@@ -127,7 +197,7 @@ function App() {
           </nav>
 
           <div className="nav-actions">
-            <a className="btn btn-primary desktop-only" href={whatsappLink} target="_blank" rel="noreferrer">
+            <a className="btn btn-primary desktop-only" href={formLink} target="_blank" rel="noreferrer">
               Pedir cita
             </a>
 
@@ -164,27 +234,30 @@ function App() {
               </p>
 
               <div className="hero-actions">
-                <a className="btn btn-primary" href={whatsappLink} target="_blank" rel="noreferrer">
-                  Hablar por WhatsApp
+                <a className="btn btn-primary" href={formLink} target="_blank" rel="noreferrer">
+                  Rellenar cuestionario
                 </a>
                 <a className="btn btn-secondary" href={mapsUrl} target="_blank" rel="noreferrer">
-                  Ver ubicación
+                  <span aria-hidden="true">📍</span> Ver ubicación
                 </a>
               </div>
 
               <ul className="hero-points" aria-label="Atributos del gimnasio">
                 <li>Fuerza</li>
-                <li>Rendimiento</li>
-                <li>Resultado</li>
+                <li>Resistencia</li>
+                <li>Hybrid Training</li>
+                <li>Comunidad</li>
               </ul>
+
+              <p className="hero-tagline">Entrena. Evoluciona. Conquista.</p>
             </div>
 
             <div className="hero-visual">
               <div className="image-frame">
-                <img src={frontGym} alt="Vista exterior del gimnasio Nieto Hybrid Training Lab" />
+                <img key={heroImages[heroIndex].src} src={heroImages[heroIndex].src} alt={heroImages[heroIndex].alt} className="hero-fade" />
                 <div className="image-badge">
-                  <strong>Grupos reducidos</strong>
-                  <span>Trato cercano y personalizado</span>
+                  <strong>{heroImages[heroIndex].badgeTitle}</strong>
+                  <span>{heroImages[heroIndex].badgeText}</span>
                 </div>
               </div>
             </div>
@@ -228,6 +301,44 @@ function App() {
           </div>
         </section>
 
+        <section id="especialidades" className="section dark-panel">
+          <div className="container">
+            <div className="section-header section-header-light">
+              <p className="eyebrow">Especialidades</p>
+              <h2>Entrenos con propósito.</h2>
+              <p className="section-subtitle">Fuerza. Resistencia. Movimiento. Todo en un mismo lugar.</p>
+            </div>
+
+            <div className="quad-grid">
+              {specialties.map((item, index) => (
+                <div key={item.title} className="process-card">
+                  <span className="step-number">0{index + 1}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="grupo" className="section">
+          <div className="container">
+            <div className="section-header">
+              <p className="eyebrow">Entrenamiento en grupo</p>
+              <h2>Más que entrenar juntos, progresar juntos.</h2>
+            </div>
+
+            <div className="quad-grid">
+              {groupBenefits.map((item) => (
+                <div key={item.title} className="process-card">
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="proceso" className="section dark-panel">
           <div className="container">
             <div className="section-header section-header-light">
@@ -243,6 +354,28 @@ function App() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section id="filosofia" className="section">
+          <div className="container">
+            <div className="section-header">
+              <p className="eyebrow">Nuestra filosofía</p>
+              <h2>No hace falta matarse en el gym.</h2>
+              <p className="section-subtitle">Una planificación con cabeza te lleva más lejos.</p>
+            </div>
+
+            <div className="process-grid">
+              {philosophyPoints.map((item, index) => (
+                <div key={item.title} className="process-card">
+                  <span className="step-number">0{index + 1}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="philosophy-tagline">Entrena con sentido. Avanza de verdad.</p>
           </div>
         </section>
 
@@ -311,6 +444,13 @@ function App() {
           </div>
         )}
 
+        <section className="motivation-banner">
+          <div className="container">
+            <p className="motivation-eyebrow">No dejes que la pereza te gane.</p>
+            <h2>Disciplina hoy, resultados mañana.</h2>
+          </div>
+        </section>
+
         <section className="section cta-section">
           <div className="container cta-box">
             <div>
@@ -319,11 +459,11 @@ function App() {
             </div>
 
             <div className="cta-actions">
-              <a className="btn btn-primary" href={whatsappLink} target="_blank" rel="noreferrer">
-                Hablar por WhatsApp
+              <a className="btn btn-primary" href={formLink} target="_blank" rel="noreferrer">
+                Rellenar cuestionario
               </a>
               <a className="btn btn-secondary" href={mapsUrl} target="_blank" rel="noreferrer">
-                Ver ubicación
+                <span aria-hidden="true">📍</span> Ver ubicación
               </a>
             </div>
           </div>
@@ -339,9 +479,8 @@ function App() {
 
           <div className="footer-column">
             <h3>Contacto</h3>
-            <a href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp: +34 601 53 35 39</a>
-            <a href={mapsUrl} target="_blank" rel="noreferrer">Marratxí, Pòrtol</a>
-            <a href={whatsappLink} target="_blank" rel="noreferrer" className="footer-cta">Pedir cita</a>
+            <a href={mapsUrl} target="_blank" rel="noreferrer"><span aria-hidden="true">📍</span> Marratxí, Pòrtol</a>
+            <a href={formLink} target="_blank" rel="noreferrer" className="footer-cta">¿Quieres unirte? Rellena el cuestionario</a>
           </div>
 
           <div className="footer-column">
@@ -355,13 +494,13 @@ function App() {
       </footer>
 
       <a
-        className="whatsapp-float"
-        href={whatsappLink}
+        className="contact-float"
+        href={formLink}
         target="_blank"
         rel="noreferrer"
-        aria-label="Contactar por WhatsApp"
+        aria-label="Rellenar cuestionario de contacto"
       >
-        WhatsApp
+        <span aria-hidden="true">📝</span> Quiero información
       </a>
     </div>
   )
