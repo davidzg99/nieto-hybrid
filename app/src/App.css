@@ -556,10 +556,6 @@ a {
 
 .material-preview {
   display: grid;
-.format-switch-short {
-  display: none;
-}
-
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2.5rem;
   align-items: center;
@@ -1101,8 +1097,12 @@ a {
 
   .specialty-media {
     position: static;
-    order: -1;
+    order: 2;
     aspect-ratio: 16 / 10;
+  }
+
+  .specialty-content {
+    order: 1;
   }
 
   .quad-grid {
@@ -1172,6 +1172,49 @@ a {
 
   .hero {
     padding-top: 3.5rem;
+  }
+
+  .specialty-hero {
+    padding: 3rem 0 2.2rem;
+  }
+
+  .specialty-hero h1 {
+    font-size: clamp(2rem, 10vw, 2.7rem);
+    line-height: 1.02;
+  }
+
+  .specialty-hero .lead {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .format-switch {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .format-switch-item {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    text-align: center;
+  }
+
+  .format-switch-full {
+    display: none;
+  }
+
+  .format-switch-short {
+    display: inline;
+  }
+
+  .specialty-content h2 {
+    font-size: 1.9rem;
+    line-height: 1.1;
+  }
+
+  .specialty-list {
+    margin-top: 1.4rem;
   }
 
   .btn {
@@ -1326,6 +1369,14 @@ a {
   color: #fff;
 }
 
+.format-switch-full {
+  display: inline;
+}
+
+.format-switch-short {
+  display: none;
+}
+
 .specialty-cta {
   margin-top: 1.8rem;
 }
@@ -1346,6 +1397,10 @@ a {
   grid-template-columns: 1.15fr 0.85fr;
   gap: 2.5rem;
   align-items: start;
+}
+
+.specialty-content {
+  min-width: 0;
 }
 
 .specialty-media {
