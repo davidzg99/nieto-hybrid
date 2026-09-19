@@ -1450,6 +1450,24 @@ a {
   color: var(--ink);
 }
 
+@media (max-width: 980px) {
+  .specialty-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .specialty-content {
+    order: 1;
+    width: 100%;
+  }
+
+  .specialty-media {
+    order: 2;
+    position: static;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+}
+
 .specialty-list {
   margin: 1.8rem 0 0;
   padding: 0;
