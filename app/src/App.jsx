@@ -11,6 +11,25 @@ import gallerySix from '../../img/image-girls.jpeg'
 import gallerySeven from '../../img/image-dog.jpeg'
 import galleryEight from '../../img/image-17.jpeg'
 import galleryNine from '../../img/image-15.jpeg'
+import galleryTen from '../../img/Image-1 (1).jpeg'
+import galleryEleven from '../../img/Image (1).jpeg'
+import galleryTwelve from '../../img/image-12.jpeg'
+
+function IconInstagram(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true" {...props}>
+      <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm10.5 1.5a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
+    </svg>
+  )
+}
+
+function IconWhatsApp(props) {
+  return (
+    <svg viewBox="0 0 32 32" fill="currentColor" width="18" height="18" aria-hidden="true" {...props}>
+      <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.386.7 4.61 1.902 6.484L4 29l7.72-1.876A11.94 11.94 0 0016.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3zm0 21.75c-1.964 0-3.79-.55-5.35-1.5l-.383-.228-4.583 1.114 1.226-4.463-.25-.394A9.71 9.71 0 016.25 15c0-5.385 4.38-9.75 9.754-9.75 5.375 0 9.746 4.365 9.746 9.75s-4.371 9.75-9.746 9.75zm5.36-7.312c-.293-.147-1.734-.856-2.003-.955-.269-.099-.465-.147-.66.147-.196.293-.758.955-.93 1.15-.171.196-.343.22-.636.073-.293-.146-1.238-.456-2.358-1.454-.872-.777-1.461-1.737-1.632-2.03-.171-.293-.018-.452.129-.598.132-.132.293-.343.44-.514.146-.171.195-.293.293-.489.098-.196.049-.367-.024-.514-.073-.147-.66-1.588-.904-2.176-.238-.573-.48-.495-.66-.504l-.562-.01c-.196 0-.514.073-.783.367-.269.293-1.026 1.003-1.026 2.444 0 1.44 1.05 2.834 1.196 3.03.147.196 2.067 3.157 5.008 4.427.7.302 1.246.483 1.673.618.703.224 1.343.192 1.849.117.564-.084 1.734-.708 1.98-1.392.245-.685.245-1.271.171-1.393-.073-.122-.269-.196-.562-.343z" />
+    </svg>
+  )
+}
 
 const navLinks = [
   { label: 'Servicios', href: '#servicios' },
@@ -127,15 +146,22 @@ const galleryImages = [
   { src: galleryTwo, alt: 'Entrenamiento colectivo' },
   { src: galleryThree, alt: 'Zona de fuerza y acondicionamiento' },
   { src: galleryFour, alt: 'Gimnasio moderno en Marratxí, Pòrtol' },
+  { src: galleryTen, alt: 'Entrenamiento en Nieto Hybrid Training Lab' },
+  { src: galleryEleven, alt: 'Sesión de entrenamiento en el gimnasio' },
   { src: galleryFive, alt: 'Comunidad de entrenamiento' },
   { src: gallerySix, alt: 'Clases y entrenamiento' },
   { src: gallerySeven, alt: 'Ambiente motivador del centro' },
   { src: galleryEight, alt: 'Entrenamiento de alta intensidad' },
   { src: galleryNine, alt: 'Espacio del gimnasio' },
+  { src: galleryTwelve, alt: 'Grupo de entrenamiento celebrando el entreno' },
 ]
 
 const mapsUrl = 'https://www.google.com/maps/place/Nieto+Hybrid+Training+Lab/@39.6160793,2.7632758,17z/data=!3m1!4b1!4m6!3m5!1s0x129795b3d18ff7bb:0xcddefd36e0171933!8m2!3d39.6160752!4d2.7658507!16s%2Fg%2F11nv9p9_98?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D'
 const formLink = 'https://succulent-nebula-1e0.notion.site/317c2dd65fbc81c18c0df788dd3ffeee?pvs=105'
+const whatsappLink = 'https://wa.me/34601533539'
+const instagramCenterLink = 'https://www.instagram.com/nh.traininglab'
+const instagramProLink = 'https://www.instagram.com/nietohybrid'
+const contactEmail = 'infonietohybrid@nietohybrid.com'
 
 const heroImages = [
   { src: frontGym, alt: 'Vista exterior del gimnasio Nieto Hybrid Training Lab', badgeTitle: 'Grupos reducidos', badgeText: 'Trato cercano y personalizado' },
@@ -239,6 +265,9 @@ function App() {
                 </a>
                 <a className="btn btn-secondary" href={mapsUrl} target="_blank" rel="noreferrer">
                   <span aria-hidden="true">📍</span> Ver ubicación
+                </a>
+                <a className="btn-icon" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp">
+                  <IconWhatsApp />
                 </a>
               </div>
 
@@ -459,11 +488,11 @@ function App() {
             </div>
 
             <div className="cta-actions">
-              <a className="btn btn-primary" href={formLink} target="_blank" rel="noreferrer">
-                Rellenar cuestionario
-              </a>
               <a className="btn btn-secondary" href={mapsUrl} target="_blank" rel="noreferrer">
                 <span aria-hidden="true">📍</span> Ver ubicación
+              </a>
+              <a className="btn btn-primary" href={whatsappLink} target="_blank" rel="noreferrer">
+                <IconWhatsApp /> Háblame
               </a>
             </div>
           </div>
@@ -480,7 +509,10 @@ function App() {
           <div className="footer-column">
             <h3>Contacto</h3>
             <a href={mapsUrl} target="_blank" rel="noreferrer"><span aria-hidden="true">📍</span> Marratxí, Pòrtol</a>
-            <a href={formLink} target="_blank" rel="noreferrer" className="footer-cta">¿Quieres unirte? Rellena el cuestionario</a>
+            <a href={instagramCenterLink} target="_blank" rel="noreferrer"><IconInstagram /> @nh.traininglab</a>
+            <a href={instagramProLink} target="_blank" rel="noreferrer"><IconInstagram /> @nietohybrid</a>
+            <a href={`mailto:${contactEmail}`}><span aria-hidden="true">✉️</span> {contactEmail}</a>
+            <a href={whatsappLink} target="_blank" rel="noreferrer"><IconWhatsApp /> WhatsApp: +34 601 53 35 39</a>
           </div>
 
           <div className="footer-column">

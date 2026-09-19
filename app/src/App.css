@@ -185,6 +185,23 @@ a {
   transform: translateY(-1px);
 }
 
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25c75d 0%, #1ca857 100%);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(28, 168, 88, 0.28);
+  transition: transform 0.2s ease;
+}
+
+.btn-icon:hover {
+  transform: translateY(-1px);
+}
+
 .btn-primary {
   background: linear-gradient(135deg, #1c5d9a 0%, #3a7bc1 100%);
   color: #f8fbff;
@@ -637,7 +654,7 @@ a {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   align-items: stretch;
 }
@@ -796,6 +813,12 @@ a {
   color: rgba(255, 255, 255, 0.76);
   text-decoration: none;
   line-height: 1.7;
+}
+
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .footer-cta {
@@ -961,6 +984,11 @@ a {
   .cta-actions {
     display: grid;
     width: 100%;
+  }
+
+  .btn-icon {
+    width: 48px;
+    justify-self: center;
   }
 
   .gallery-grid {
