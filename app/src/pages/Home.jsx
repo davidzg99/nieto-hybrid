@@ -25,18 +25,24 @@ const services = [
     title: 'Entrenamiento personal en grupos reducidos',
     text: 'Entrenamiento en el centro con guía directa, técnica y ambiente motivador.',
     badge: 'Fuerza + técnica',
+    image: galleryTwo,
+    imageAlt: 'Entrenamiento personal en grupos reducidos',
   },
   {
     slug: 'hibrido',
     title: 'Programa Híbrido',
     text: 'Sesiones presenciales combinadas con seguimiento online personalizado: nutrición para pérdida de peso, preparación de carreras de running e híbridas y más.',
     badge: 'Flexible',
+    image: galleryEight,
+    imageAlt: 'Programa Híbrido de entrenamiento',
   },
   {
     slug: 'online',
     title: 'The Hybrid Method',
     text: 'Entrenamiento y nutrición 100% a distancia con seguimiento semanal por WhatsApp y app HARBIZ.',
     badge: 'App + seguimiento',
+    image: galleryFive,
+    imageAlt: 'Seguimiento online de The Hybrid Method',
   },
 ]
 
@@ -231,6 +237,7 @@ function Home() {
                   to={`/servicios/${service.slug}/${specialtyPages[0].slug}`}
                   className="service-card service-link"
                 >
+                  <img className="service-card-image" src={service.image} alt={service.imageAlt} />
                   <span className="service-index">0{index + 1}</span>
                   <span className="service-badge">{service.badge}</span>
                   <h3>{service.title}</h3>

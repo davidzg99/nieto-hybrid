@@ -65,7 +65,7 @@ function ServicePage() {
             </div>
 
             <div className="specialty-media">
-              <img src={specialty.image} alt={specialty.imageAlt} />
+              <img src={serviceFormat.image} alt={serviceFormat.imageAlt} />
             </div>
           </div>
         </section>

@@ -481,7 +481,21 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  min-height: 250px;
+  min-height: 420px;
+  padding: 0 1.8rem 1.8rem;
+}
+
+.service-card-image {
+  display: block;
+  width: calc(100% + 3.6rem);
+  height: 190px;
+  margin: 0 -1.8rem;
+  object-fit: cover;
+}
+
+.service-card > :not(.service-card-image) {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .service-link {
@@ -959,10 +973,7 @@ a {
   .specialty-media {
     position: static;
     order: -1;
-  }
-
-  .specialty-media img {
-    min-height: 280px;
+    aspect-ratio: 16 / 10;
   }
 
   .quad-grid {
@@ -1204,13 +1215,13 @@ a {
   border-radius: 24px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  aspect-ratio: 4 / 5;
 }
 
 .specialty-media img {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 420px;
   object-fit: cover;
 }
 
