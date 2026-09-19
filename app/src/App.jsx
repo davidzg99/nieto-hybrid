@@ -260,14 +260,8 @@ function App() {
               </p>
 
               <div className="hero-actions">
-                <a className="btn btn-primary" href={formLink} target="_blank" rel="noreferrer">
-                  Rellenar cuestionario
-                </a>
                 <a className="btn btn-secondary" href={mapsUrl} target="_blank" rel="noreferrer">
                   <span aria-hidden="true">📍</span> Ver ubicación
-                </a>
-                <a className="btn-icon" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp">
-                  <IconWhatsApp />
                 </a>
               </div>
 
@@ -522,6 +516,14 @@ function App() {
             <p>Hyrox y resistencia</p>
             <p>Clases de grupo</p>
           </div>
+        </div>
+
+        <div className="container footer-credit">
+          <a href="https://ainnovar-systems.com/" target="_blank" rel="noreferrer">
+            Hecho por
+            <span>Ainnovar Systems</span>
+            <img src="https://ainnovar-systems.com/ainnorvar_logo_sin_fondo.png" alt="Ainnovar Systems" />
+          </a>
         </div>
       </footer>
 

@@ -209,9 +209,10 @@ a {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+  border-color: transparent;
   color: #fff;
+  box-shadow: 0 18px 32px rgba(26, 115, 232, 0.28);
 }
 
 .hero {
@@ -772,6 +773,33 @@ a {
   gap: 2rem;
   align-items: start;
   padding-top: 0.5rem;
+}
+
+.footer-credit {
+  margin-top: 2rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+
+.footer-credit a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-credit img {
+  height: 28px;
+  width: auto;
 }
 
 .footer-brand {
