@@ -1468,6 +1468,18 @@ a {
   }
 }
 
+@media (max-width: 640px) {
+  .specialty-layout {
+    width: 100%;
+    padding-inline: 0.75rem;
+  }
+
+  .specialty-content,
+  .specialty-media {
+    width: 100%;
+  }
+}
+
 .specialty-list {
   margin: 1.8rem 0 0;
   padding: 0;
