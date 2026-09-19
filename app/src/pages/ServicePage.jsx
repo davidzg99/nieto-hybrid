@@ -49,18 +49,24 @@ function ServicePage() {
         </section>
 
         <section className="section">
-          <div className="container specialty-content">
-            <p className="eyebrow">{specialty.title}</p>
-            <h2>{activeSection.heading}</h2>
-            <p className="section-subtitle">{activeSection.intro}</p>
-            <ul className="specialty-list">
-              {activeSection.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
-              ))}
-            </ul>
-            <a className="btn btn-primary specialty-cta" href={formLink} target="_blank" rel="noreferrer">
-              Rellenar cuestionario
-            </a>
+          <div className="container specialty-layout">
+            <div className="specialty-content">
+              <p className="eyebrow">{specialty.title}</p>
+              <h2>{activeSection.heading}</h2>
+              <p className="section-subtitle">{activeSection.intro}</p>
+              <ul className="specialty-list">
+                {activeSection.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+              <a className="btn btn-primary specialty-cta" href={formLink} target="_blank" rel="noreferrer">
+                Rellenar cuestionario
+              </a>
+            </div>
+
+            <div className="specialty-media">
+              <img src={specialty.image} alt={specialty.imageAlt} />
+            </div>
           </div>
         </section>
       </main>

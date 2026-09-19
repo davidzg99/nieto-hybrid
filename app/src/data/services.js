@@ -1,18 +1,18 @@
 export const serviceFormats = [
   {
     slug: 'presencial',
-    title: 'Presencial',
+    title: 'Entrenamiento personal en grupos reducidos',
     tagline: 'Entrenamiento en el centro con guía directa, técnica y ambiente motivador.',
   },
   {
     slug: 'hibrido',
-    title: 'Híbrido',
-    tagline: 'Combinación de sesiones presenciales y seguimiento online para avanzar sin perder continuidad.',
+    title: 'Programa Híbrido',
+    tagline: 'Sesiones presenciales en el centro combinadas con seguimiento online personalizado: desde planes de nutrición para pérdida de peso hasta preparación para carreras de running e híbridas.',
   },
   {
     slug: 'online',
-    title: 'Online',
-    tagline: 'Programación a distancia para quienes necesitan entrenar desde casa con estructura y control.',
+    title: 'The Hybrid Method',
+    tagline: 'Método 100% a distancia con entrenamiento y nutrición personalizados, seguimiento semanal por WhatsApp y app HARBIZ.',
   },
 ]
 

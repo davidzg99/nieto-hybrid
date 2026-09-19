@@ -22,21 +22,21 @@ import galleryTwelve from '../../../img/image-12.jpeg'
 const services = [
   {
     slug: 'presencial',
-    title: 'Presencial',
+    title: 'Entrenamiento personal en grupos reducidos',
     text: 'Entrenamiento en el centro con guía directa, técnica y ambiente motivador.',
     badge: 'Fuerza + técnica',
   },
   {
     slug: 'hibrido',
-    title: 'Híbrido',
-    text: 'Combinación de sesiones presenciales y seguimiento online para avanzar sin perder continuidad.',
+    title: 'Programa Híbrido',
+    text: 'Sesiones presenciales combinadas con seguimiento online personalizado: nutrición para pérdida de peso, preparación de carreras de running e híbridas y más.',
     badge: 'Flexible',
   },
   {
     slug: 'online',
-    title: 'Online',
-    text: 'Programación a distancia para quienes necesitan entrenar desde casa con estructura y control.',
-    badge: 'Desde casa',
+    title: 'The Hybrid Method',
+    text: 'Entrenamiento y nutrición 100% a distancia con seguimiento semanal por WhatsApp y app HARBIZ.',
+    badge: 'App + seguimiento',
   },
 ]
 
@@ -72,12 +72,6 @@ const philosophyPoints = [
     title: 'Entrena mejor, vive mejor',
     text: 'Más rendimiento, menos lesiones y una relación sana con el entrenamiento.',
   },
-]
-
-const steps = [
-  'Rellenas el cuestionario con tus objetivos y disponibilidad.',
-  'Revisamos tus respuestas y te contactamos para valorar tu caso.',
-  'Diseñamos el plan perfecto para que empieces con claridad.',
 ]
 
 const reviews = [
@@ -256,7 +250,7 @@ function Home() {
               <p className="section-subtitle">Fuerza. Resistencia. Movimiento. Todo en un mismo lugar.</p>
             </div>
 
-            <div className="quad-grid specialty-grid">
+            <div className="quad-grid">
               {specialtyPages.map((item, index) => (
                 <article key={item.slug} className="process-card">
                   <span className="step-number">0{index + 1}</span>
@@ -286,27 +280,9 @@ function Home() {
           </div>
         </section>
 
-        <section id="proceso" className="section dark-panel">
+        <section id="filosofia" className="section dark-panel">
           <div className="container">
             <div className="section-header section-header-light">
-              <p className="eyebrow">Cómo funciona</p>
-              <h2>Simple, humano y eficaz.</h2>
-            </div>
-
-            <div className="process-grid">
-              {steps.map((step, index) => (
-                <div key={step} className="process-card">
-                  <span className="step-number">0{index + 1}</span>
-                  <p>{step}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="filosofia" className="section">
-          <div className="container">
-            <div className="section-header">
               <p className="eyebrow">Nuestra filosofía</p>
               <h2>No hace falta matarse en el gym.</h2>
               <p className="section-subtitle">Una planificación con cabeza te lleva más lejos.</p>

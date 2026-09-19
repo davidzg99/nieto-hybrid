@@ -1,3 +1,8 @@
+import imgFuncional from '../../../img/Image-1-7.jpeg'
+import imgCarreras from '../../../img/image-10.jpeg'
+import imgNutricion from '../../../img/image-14.jpeg'
+import imgGrupo from '../../../img/Image-1.jpeg'
+
 export const specialties = [
   {
     slug: 'entrenamiento-funcional',
@@ -5,20 +10,22 @@ export const specialties = [
     tagline: 'Movilidad, fuerza, resistencia y coordinación en un mismo entrenamiento.',
     summary:
       'Entrenamientos completos y variados pensados para mejorar tu cuerpo de forma global: fuerza, movilidad, resistencia y coordinación trabajadas de manera conjunta y con propósito.',
+    image: imgFuncional,
+    imageAlt: 'Entrenamiento funcional en Nieto Hybrid Training Lab',
     sections: {
       presencial: {
-        heading: 'Entrenamiento funcional presencial',
+        heading: 'Entrenamiento funcional en grupos reducidos',
         intro:
           'Sesiones en el centro con el entrenador presente, corrigiendo tu técnica en directo y adaptando cada ejercicio a tu nivel.',
         bullets: [
           'Grupos reducidos con corrección técnica en tiempo real.',
           'Trabajo de fuerza, movilidad y acondicionamiento en cada sesión.',
-          'Material y espacio del centro a tu disposición.',
+          'Material e instalaciones del centro incluidos durante tu sesión programada.',
           'Ambiente motivador y cercano en cada clase.',
         ],
       },
       hibrido: {
-        heading: 'Entrenamiento funcional híbrido',
+        heading: 'Entrenamiento funcional · Programa Híbrido',
         intro:
           'Combina sesiones presenciales en el centro con programación online complementaria para no perder continuidad entre semana.',
         bullets: [
@@ -29,13 +36,13 @@ export const specialties = [
         ],
       },
       online: {
-        heading: 'Entrenamiento funcional online',
+        heading: 'Entrenamiento funcional · The Hybrid Method',
         intro:
-          'Plan de entrenamiento funcional 100% a distancia, con vídeos explicativos y seguimiento para entrenar con estructura desde donde estés.',
+          'Plan de entrenamiento 100% a distancia con sobrecarga progresiva durante 12 semanas, vídeos explicativos y todo centralizado en la app HARBIZ.',
         bullets: [
           'Plan de entrenamiento adaptado a tu material y espacio disponible.',
-          'Vídeos y explicaciones de cada ejercicio.',
-          'Seguimiento y ajustes periódicos del plan.',
+          'Sobrecarga progresiva y ebooks exclusivos de entrenamiento y hábitos saludables.',
+          'Soporte a través de la app HARBIZ y feedback semanal de tu progresión.',
           'Progresión estructurada sin necesidad de venir al centro.',
         ],
       },
@@ -47,9 +54,11 @@ export const specialties = [
     tagline: 'Endurance y preparación de carreras con propósito competitivo.',
     summary:
       'Sesiones de Hybrid WOD diseñadas para desarrollar tu capacidad aeróbica, resistencia y rendimiento de cara a carreras y pruebas híbridas.',
+    image: imgCarreras,
+    imageAlt: 'Preparación de carreras híbridas en Nieto Hybrid Training Lab',
     sections: {
       presencial: {
-        heading: 'Carreras híbridas presencial',
+        heading: 'Carreras híbridas en grupos reducidos',
         intro:
           'Entrenamientos de Hybrid WOD en el centro, combinando carrera, fuerza y acondicionamiento bajo la supervisión del entrenador.',
         bullets: [
@@ -60,7 +69,7 @@ export const specialties = [
         ],
       },
       hibrido: {
-        heading: 'Carreras híbridas híbrido',
+        heading: 'Carreras híbridas · Programa Híbrido',
         intro:
           'Sesiones presenciales de calidad en el centro combinadas con rodajes y series programadas para hacer por tu cuenta.',
         bullets: [
@@ -71,56 +80,14 @@ export const specialties = [
         ],
       },
       online: {
-        heading: 'Carreras híbridas online',
+        heading: 'Carreras híbridas · The Hybrid Method',
         intro:
-          'Preparación de carrera 100% a distancia, con bloques de entrenamiento planificados según tu fecha objetivo.',
+          'Preparación de carrera 100% a distancia, con bloques de entrenamiento planificados según tu fecha objetivo y todo centralizado en la app HARBIZ.',
         bullets: [
           'Bloques de entrenamiento orientados a tu fecha objetivo.',
-          'Plan de carrera y fuerza complementaria a distancia.',
-          'Ajuste de volumen e intensidad semana a semana.',
-          'Seguimiento y feedback periódico de tu progresión.',
-        ],
-      },
-    },
-  },
-  {
-    slug: 'hyrox-strong-race',
-    title: 'Hyrox Strong Race',
-    tagline: 'Técnica y preparación específica para Hyrox.',
-    summary:
-      'Entrenamientos de Hyrox programados en el gimnasio, centrados en la técnica y la preparación específica para mejorar tu rendimiento en competición.',
-    sections: {
-      presencial: {
-        heading: 'Hyrox Strong Race presencial',
-        intro:
-          'Entrenamientos de Hyrox en el gimnasio, con el material específico de cada estación y corrección técnica en directo.',
-        bullets: [
-          'Trabajo técnico de las estaciones de Hyrox con material específico.',
-          'Simulacros de carrera para acostumbrarte al formato.',
-          'Grupos reducidos con corrección técnica constante.',
-          'Trabajo de transiciones entre estaciones.',
-        ],
-      },
-      hibrido: {
-        heading: 'Hyrox Strong Race híbrido',
-        intro:
-          'Sesiones presenciales de técnica en el centro combinadas con programación online para completar volumen de entrenamiento.',
-        bullets: [
-          'Sesiones presenciales centradas en la técnica de cada estación.',
-          'Programación online para el resto de la semana.',
-          'Planificación por bloques según tu calendario de carreras.',
-          'Ajuste según tu nivel, desde debutantes hasta competidores.',
-        ],
-      },
-      online: {
-        heading: 'Hyrox Strong Race online',
-        intro:
-          'Preparación de Hyrox a distancia, con plan de entrenamiento progresivo y seguimiento de tu evolución.',
-        bullets: [
-          'Plan de entrenamiento específico para Hyrox a distancia.',
-          'Progresión desde la técnica hasta el ritmo de competición.',
-          'Ajuste del plan según tu material disponible.',
-          'Seguimiento de tiempos y evolución en cada bloque.',
+          'Plan de carrera y fuerza complementaria con sobrecarga progresiva.',
+          'Soporte a través de la app HARBIZ y feedback semanal de tu progresión.',
+          'Ebooks exclusivos sobre entrenamiento, nutrición y hábitos saludables.',
         ],
       },
     },
@@ -131,9 +98,11 @@ export const specialties = [
     tagline: 'Consigue un cuerpo más fuerte y definido con un plan adaptado a ti.',
     summary:
       'Plan nutricional 100% adaptado a tus necesidades, objetivos, horarios y gustos, con acompañamiento y seguimiento constante.',
+    image: imgNutricion,
+    imageAlt: 'Plan de nutrición y dietética de Nieto Hybrid Training Lab',
     sections: {
       presencial: {
-        heading: 'Nutrición y dietética presencial',
+        heading: 'Nutrición y dietética en grupos reducidos',
         intro: 'Revisiones y seguimiento en el propio centro, con explicación en persona de tu plan y tus avances.',
         bullets: [
           'Valoración inicial y revisiones periódicas en el centro.',
@@ -143,7 +112,7 @@ export const specialties = [
         ],
       },
       hibrido: {
-        heading: 'Nutrición y dietética híbrido',
+        heading: 'Nutrición y dietética · Programa Híbrido',
         intro: 'Plan nutricional personalizado con revisiones presenciales puntuales y seguimiento diario online.',
         bullets: [
           'Plan nutricional 100% adaptado a tus necesidades, objetivos, horarios y gustos.',
@@ -153,13 +122,13 @@ export const specialties = [
         ],
       },
       online: {
-        heading: 'Nutrición y dietética online',
-        intro: 'Consigue un cuerpo más fuerte y definido en 12 semanas con un plan 100% a distancia.',
+        heading: 'Nutrición y dietética · The Hybrid Method',
+        intro: 'Consigue un cuerpo más fuerte y definido en 12 semanas con un plan 100% a distancia, centralizado en la app HARBIZ.',
         bullets: [
           'Plan nutricional 100% adaptado a tus necesidades, objetivos, horarios y gustos.',
           'Comidas equilibradas, rápidas y fáciles de preparar. Entrega en PDF profesional.',
-          'Soporte diario por WhatsApp de lunes a viernes (11:00-13:00h y 21:00-22:00h).',
-          'Cuestionarios semanales y mensuales y feedback personalizado cada lunes por WhatsApp.',
+          'Soporte diario por WhatsApp de lunes a viernes (11:00-13:00h y 20:00-22:00h).',
+          'Cuestionarios semanales y mensuales y feedback personalizado cada lunes a través de la app HARBIZ.',
           'Seguimiento de peso, perímetros (opcionales) y fotos en 3 posiciones para valorar resultados reales.',
         ],
       },
@@ -171,9 +140,11 @@ export const specialties = [
     tagline: 'Más que entrenar juntos, progresar juntos.',
     summary:
       'Entrena en un entorno cercano, con grupos reducidos donde el entrenador puede estar más encima de ti y adaptar cada ejercicio a tus posibilidades.',
+    image: imgGrupo,
+    imageAlt: 'Entrenamiento en grupo reducido en Nieto Hybrid Training Lab',
     sections: {
       presencial: {
-        heading: 'Grupo Reducido presencial',
+        heading: 'Grupo Reducido en grupos reducidos',
         intro:
           'Entrena en el centro dentro de un grupo reducido, con el entrenador presente y pendiente de cada persona.',
         bullets: [
@@ -184,7 +155,7 @@ export const specialties = [
         ],
       },
       hibrido: {
-        heading: 'Grupo Reducido híbrido',
+        heading: 'Grupo Reducido · Programa Híbrido',
         intro:
           'Entrenamiento en grupo presencial combinado con seguimiento individual online entre sesiones.',
         bullets: [
@@ -195,7 +166,7 @@ export const specialties = [
         ],
       },
       online: {
-        heading: 'Grupo Reducido online',
+        heading: 'Grupo Reducido · The Hybrid Method',
         intro:
           'Grupos reducidos coordinados a distancia, con programación conjunta y encuentros virtuales para mantener la motivación.',
         bullets: [

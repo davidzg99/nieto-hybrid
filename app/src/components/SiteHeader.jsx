@@ -27,7 +27,7 @@ function SiteHeader() {
 
         <div className="nav-actions">
           <a className="btn btn-primary desktop-only" href={formLink} target="_blank" rel="noreferrer">
-            Pedir cita
+            Reserva tu plaza
           </a>
 
           <button
