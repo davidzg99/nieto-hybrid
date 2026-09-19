@@ -1106,10 +1106,13 @@ a {
     position: static;
     order: 2;
     aspect-ratio: 16 / 10;
+    width: 100%;
   }
 
   .specialty-content {
     order: 1;
+    width: 100%;
+    max-width: none;
   }
 
   .quad-grid {
@@ -1218,6 +1221,19 @@ a {
   .specialty-content h2 {
     font-size: 1.9rem;
     line-height: 1.1;
+  }
+
+  .specialty-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .specialty-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .specialty-list {
