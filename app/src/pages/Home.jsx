@@ -178,17 +178,10 @@ function Home() {
                 Nieto Hybrid Training Lab combina fuerza, resistencia y acompañamiento real para ayudarte a mejorar tu cuerpo, tu salud y tu confianza.
               </p>
 
-              <div className="hero-actions">
-                <a className="btn btn-secondary" href={mapsUrl} target="_blank" rel="noreferrer">
-                  <span aria-hidden="true">📍</span> Ver ubicación
-                </a>
-              </div>
-
               <ul className="hero-points" aria-label="Atributos del gimnasio">
                 <li>Fuerza</li>
                 <li>Resistencia</li>
                 <li>Hybrid Training</li>
-                <li>Comunidad</li>
               </ul>
 
               <p className="hero-tagline">Entrena. Evoluciona. Conquista.</p>
