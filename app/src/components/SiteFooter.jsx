@@ -25,7 +25,7 @@ function SiteFooter() {
           <p>Entrenamiento funcional</p>
           <p>Fuerza y acondicionamiento</p>
           <p>Hyrox y resistencia</p>
-          <p>Clases de grupo</p>
+          <p>Grupos reducidos</p>
         </div>
       </div>
 

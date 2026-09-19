@@ -51,8 +51,8 @@ function ServicePage() {
         <section className="section">
           <div className="container specialty-layout">
             <div className="specialty-content">
-              <p className="eyebrow">{specialty.title}</p>
-              <h2>{activeSection.heading}</h2>
+              <p className="eyebrow">{serviceFormat.eyebrow}</p>
+              <h2>{serviceFormat.detailTitle}</h2>
               <p className="section-subtitle">{activeSection.intro}</p>
               <ul className="specialty-list">
                 {activeSection.bullets.map((bullet) => (
@@ -62,6 +62,11 @@ function ServicePage() {
               <a className="btn btn-primary specialty-cta" href={formLink} target="_blank" rel="noreferrer">
                 Rellenar cuestionario
               </a>
+              {format !== 'online' && (
+                <Link className="material-service-link" to="/material">
+                  Ver el material del centro
+                </Link>
+              )}
             </div>
 
             <div className="specialty-media">

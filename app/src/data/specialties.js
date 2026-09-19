@@ -20,12 +20,12 @@ export const specialties = [
         bullets: [
           'Grupos reducidos con corrección técnica en tiempo real.',
           'Trabajo de fuerza, movilidad y acondicionamiento en cada sesión.',
-          'Material e instalaciones del centro incluidos durante tu sesión programada.',
+          'Instalaciones y material totalmente acondicionados con todo lo necesario para las clases.',
           'Ambiente motivador y cercano en cada clase.',
         ],
       },
       hibrido: {
-        heading: 'Entrenamiento funcional · Programa Híbrido',
+        heading: 'Programa Híbrido',
         intro:
           'Combina sesiones presenciales en el centro con programación online complementaria para no perder continuidad entre semana.',
         bullets: [
@@ -36,13 +36,13 @@ export const specialties = [
         ],
       },
       online: {
-        heading: 'Entrenamiento funcional · The Hybrid Method',
+        heading: 'The Hybrid Method',
         intro:
-          'Plan de entrenamiento 100% a distancia con sobrecarga progresiva durante 12 semanas, vídeos explicativos y todo centralizado en la app HARBIZ.',
+          'Plan 100% a distancia con sobrecarga progresiva durante 12 semanas, vídeos explicativos y todo centralizado. Soporte y feedback semanal de tu progresión.',
         bullets: [
           'Plan de entrenamiento adaptado a tu material y espacio disponible.',
           'Sobrecarga progresiva y ebooks exclusivos de entrenamiento y hábitos saludables.',
-          'Soporte a través de la app HARBIZ y feedback semanal de tu progresión.',
+          'Todo centralizado. Soporte y feedback semanal de tu progresión.',
           'Progresión estructurada sin necesidad de venir al centro.',
         ],
       },
@@ -69,7 +69,7 @@ export const specialties = [
         ],
       },
       hibrido: {
-        heading: 'Carreras híbridas · Programa Híbrido',
+        heading: 'Programa Híbrido',
         intro:
           'Sesiones presenciales de calidad en el centro combinadas con rodajes y series programadas para hacer por tu cuenta.',
         bullets: [
@@ -80,13 +80,13 @@ export const specialties = [
         ],
       },
       online: {
-        heading: 'Carreras híbridas · The Hybrid Method',
+        heading: 'The Hybrid Method',
         intro:
-          'Preparación de carrera 100% a distancia, con bloques de entrenamiento planificados según tu fecha objetivo y todo centralizado en la app HARBIZ.',
+          'Preparación de carrera 100% a distancia, con bloques de entrenamiento planificados según tu fecha objetivo. Todo centralizado. Soporte y feedback semanal de tu progresión.',
         bullets: [
           'Bloques de entrenamiento orientados a tu fecha objetivo.',
           'Plan de carrera y fuerza complementaria con sobrecarga progresiva.',
-          'Soporte a través de la app HARBIZ y feedback semanal de tu progresión.',
+          'Todo centralizado. Soporte y feedback semanal de tu progresión.',
           'Ebooks exclusivos sobre entrenamiento, nutrición y hábitos saludables.',
         ],
       },
@@ -112,7 +112,7 @@ export const specialties = [
         ],
       },
       hibrido: {
-        heading: 'Nutrición y dietética · Programa Híbrido',
+        heading: 'Programa Híbrido',
         intro: 'Plan nutricional personalizado con revisiones presenciales puntuales y seguimiento diario online.',
         bullets: [
           'Plan nutricional 100% adaptado a tus necesidades, objetivos, horarios y gustos.',
@@ -122,13 +122,13 @@ export const specialties = [
         ],
       },
       online: {
-        heading: 'Nutrición y dietética · The Hybrid Method',
-        intro: 'Consigue un cuerpo más fuerte y definido en 12 semanas con un plan 100% a distancia, centralizado en la app HARBIZ.',
+        heading: 'The Hybrid Method',
+        intro: 'Consigue un cuerpo más fuerte y definido en 12 semanas con un plan 100% a distancia. Todo centralizado. Soporte y feedback semanal de tu progresión.',
         bullets: [
           'Plan nutricional 100% adaptado a tus necesidades, objetivos, horarios y gustos.',
           'Comidas equilibradas, rápidas y fáciles de preparar. Entrega en PDF profesional.',
           'Soporte diario por WhatsApp de lunes a viernes (11:00-13:00h y 20:00-22:00h).',
-          'Cuestionarios semanales y mensuales y feedback personalizado cada lunes a través de la app HARBIZ.',
+          'Todo centralizado. Soporte y feedback semanal de tu progresión.',
           'Seguimiento de peso, perímetros (opcionales) y fotos en 3 posiciones para valorar resultados reales.',
         ],
       },
@@ -155,7 +155,7 @@ export const specialties = [
         ],
       },
       hibrido: {
-        heading: 'Grupo Reducido · Programa Híbrido',
+        heading: 'Programa Híbrido',
         intro:
           'Entrenamiento en grupo presencial combinado con seguimiento individual online entre sesiones.',
         bullets: [
@@ -166,7 +166,7 @@ export const specialties = [
         ],
       },
       online: {
-        heading: 'Grupo Reducido · The Hybrid Method',
+        heading: 'The Hybrid Method',
         intro:
           'Grupos reducidos coordinados a distancia, con programación conjunta y encuentros virtuales para mantener la motivación.',
         bullets: [

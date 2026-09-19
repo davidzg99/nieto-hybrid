@@ -39,7 +39,7 @@ const services = [
   {
     slug: 'online',
     title: 'The Hybrid Method',
-    text: 'Entrenamiento y nutrición 100% a distancia con seguimiento semanal por WhatsApp y app HARBIZ.',
+    text: 'Entrenamiento y nutrición 100% a distancia. Todo centralizado. Soporte y feedback semanal de tu progresión.',
     badge: 'App + seguimiento',
     image: galleryFive,
     imageAlt: 'Seguimiento online de The Hybrid Method',
@@ -249,6 +249,22 @@ function Home() {
           </div>
         </section>
 
+        <section className="section material-preview-section">
+          <div className="container material-preview">
+            <img src={galleryTwo} alt="Zona de entrenamiento y material del centro" />
+            <div>
+              <p className="eyebrow">Material del centro</p>
+              <h2>Un espacio preparado para cada sesión.</h2>
+              <p className="section-subtitle">
+                Descubre las máquinas, pesos libres y material funcional disponibles en Nieto Hybrid Training Lab.
+              </p>
+              <Link className="btn btn-secondary" to="/material">
+                Ver máquinas y material
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section id="especialidades" className="section dark-panel">
           <div className="container">
             <div className="section-header section-header-light">
@@ -290,7 +306,7 @@ function Home() {
         <section id="filosofia" className="section dark-panel">
           <div className="container">
             <div className="section-header section-header-light">
-              <p className="eyebrow">Nuestra filosofía</p>
+              <p className="motivation-eyebrow">Entrena con sentido. Avanza de verdad.</p>
               <h2>No hace falta matarse en el gym.</h2>
               <p className="section-subtitle">Una planificación con cabeza te lleva más lejos.</p>
             </div>
@@ -305,13 +321,12 @@ function Home() {
               ))}
             </div>
 
-            <p className="philosophy-tagline">Entrena con sentido. Avanza de verdad.</p>
           </div>
         </section>
 
-        <section id="reseñas" className="section dark-panel">
+        <section id="reseñas" className="section">
           <div className="container">
-            <div className="section-header section-header-light split-header">
+            <div className="section-header split-header">
               <div>
                 <p className="eyebrow">Reseñas</p>
                 <h2>La confianza se construye con resultados reales.</h2>

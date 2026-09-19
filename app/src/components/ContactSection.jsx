@@ -29,6 +29,8 @@ function ContactSection() {
               <IconInstagram /> @nietohybrid
             </a>
 
+            <p className="contact-highlight">Entrena con sentido. Avanza de verdad.</p>
+
             <div className="contact-actions">
               <a className="btn btn-primary" href={formLink} target="_blank" rel="noreferrer">
                 Rellenar cuestionario

@@ -1,5 +1,6 @@
 export const navLinks = [
   { label: 'Servicios', href: '/#servicios' },
+  { label: 'Material', href: '/material' },
   { label: 'Especialidades', href: '/#especialidades' },
   { label: 'Reseñas', href: '/#reseñas' },
   { label: 'Galería', href: '/#galeria' },
