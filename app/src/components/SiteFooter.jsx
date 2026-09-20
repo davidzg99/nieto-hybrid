@@ -35,6 +35,9 @@ function SiteFooter() {
           <span>Ainnovar Systems</span>
           <img src="https://ainnovar-systems.com/ainnorvar_logo_sin_fondo.png" alt="Ainnovar Systems" />
         </a>
+        <a className="footer-promo" href="https://ainnovar-systems.com/" target="_blank" rel="noreferrer">
+          ¿Quieres tu página web? Pídela aquí →
+        </a>
       </div>
     </footer>
   )

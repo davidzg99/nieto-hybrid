@@ -983,7 +983,21 @@ a {
   padding-top: 1.4rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-promo {
+  color: #7ab6ff;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer-promo:hover {
+  color: #a9d0ff;
 }
 
 .footer-credit a {
@@ -1320,6 +1334,10 @@ a {
 
   .footer-logo {
     width: 110px;
+  }
+
+  .footer-credit {
+    padding-bottom: 4.5rem;
   }
 
   .lightbox {
