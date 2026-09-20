@@ -1,6 +1,6 @@
 import imagePresencial from '../assets/photos/image-6.webp'
 import imageHibrido from '../assets/photos/image-17.webp'
-import imageOnline from '../assets/photos/image-family.webp'
+import imageOnline from '../assets/photos/image-01.webp'
 
 export const serviceFormats = [
   {
@@ -31,7 +31,7 @@ export const serviceFormats = [
     eyebrow: 'Programa Online',
     detailTitle: 'The Hybrid Method',
     image: imageOnline,
-    imageAlt: 'Seguimiento online de The Hybrid Method',
+    imageAlt: 'Entrenamiento individual dentro de The Hybrid Method',
   },
 ]
 

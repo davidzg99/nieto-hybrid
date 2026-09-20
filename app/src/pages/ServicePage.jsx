@@ -78,8 +78,8 @@ function ServicePage() {
 
             <div className="specialty-media">
               <img
-                src={specialty.image}
-                alt={specialty.imageAlt}
+                src={serviceFormat.image}
+                alt={serviceFormat.imageAlt}
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
