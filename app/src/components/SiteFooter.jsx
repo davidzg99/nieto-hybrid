@@ -1,4 +1,4 @@
-import logo from '../../../img/logo.jpg'
+import logo from '../assets/photos/logo.jpg'
 import { IconInstagram, IconWhatsApp } from './icons'
 import { mapsUrl, instagramCenterLink, instagramProLink, contactEmail, whatsappLink } from '../data/site'
 import { specialties } from '../data/specialties'
@@ -8,7 +8,7 @@ function SiteFooter() {
     <footer className="site-footer">
       <div className="container footer-shell">
         <div className="footer-brand">
-          <img src={logo} alt="Nieto Hybrid Training Lab" className="footer-logo" />
+          <img src={logo} alt="Nieto Hybrid Training Lab" className="footer-logo" loading="lazy" decoding="async" />
           <p>Gimnasio y entrenamiento funcional en Marratxí, Pòrtol, para quienes quieren mejorar su fuerza, su salud y su energía.</p>
         </div>
 

@@ -1,6 +1,6 @@
-import imagePresencial from '../../../img/Image-6.jpeg'
-import imageHibrido from '../../../img/image-17.jpeg'
-import imageOnline from '../../../img/image-family.jpeg'
+import imagePresencial from '../assets/photos/image-6.webp'
+import imageHibrido from '../assets/photos/image-17.webp'
+import imageOnline from '../assets/photos/image-family.webp'
 
 export const serviceFormats = [
   {

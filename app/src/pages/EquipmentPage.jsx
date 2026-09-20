@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import SiteHeader from '../components/SiteHeader'
 import SiteFooter from '../components/SiteFooter'
-import imageRoom from '../../../img/Image-6.jpeg'
-import imageRig from '../../../img/Image-5.jpeg'
-import imageCable from '../../../img/Image-2.jpeg'
-import imageDumbbells from '../../../img/Image-1-7.jpeg'
-import imageRowers from '../../../img/Image-1.jpeg'
-import imageBars from '../../../img/Image.jpeg'
-import imageTreadmillAndKettlebells from '../../../img/Image-1 (1).jpeg'
+import Seo from '../components/Seo'
+import imageRoom from '../assets/photos/image-6.webp'
+import imageRig from '../assets/photos/image-5.webp'
+import imageCable from '../assets/photos/image-2.webp'
+import imageDumbbells from '../assets/photos/image-1-7.webp'
+import imageRowers from '../assets/photos/image-1.webp'
+import imageBars from '../assets/photos/image.webp'
+import imageTreadmillAndKettlebells from '../assets/photos/image-1-01.webp'
 
 const equipment = [
   {
@@ -86,6 +87,11 @@ function EquipmentPage() {
 
   return (
     <div className="page-shell">
+      <Seo
+        title="Material y equipamiento del centro | Nieto Hybrid Training Lab"
+        description="Ergómetros (SkiErg, remo, Airbike), cinta de correr, kettlebells, jaula con TRX y anillas, trineo de empuje, wallballs y cajones pliométricos en Nieto Hybrid Training Lab, Marratxí."
+        path="/material"
+      />
       <SiteHeader />
 
       <main>
@@ -110,7 +116,7 @@ function EquipmentPage() {
             </div>
 
             <div className="equipment-grid">
-              {equipment.map((item) => (
+              {equipment.map((item, index) => (
                 <article className="equipment-card" key={item.title}>
                   <button
                     type="button"
@@ -118,7 +124,13 @@ function EquipmentPage() {
                     onClick={() => setSelectedEquipment(item)}
                     aria-label={`Ampliar imagen: ${item.title}`}
                   >
-                    <img src={item.image} alt={item.alt} style={{ objectPosition: item.imagePosition }} />
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      style={{ objectPosition: item.imagePosition }}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      decoding="async"
+                    />
                   </button>
                   <div className="equipment-card-body">
                     <p className="eyebrow">{item.category}</p>

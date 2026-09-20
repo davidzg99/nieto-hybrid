@@ -3,21 +3,23 @@ import { Link } from 'react-router-dom'
 import SiteHeader from '../components/SiteHeader'
 import SiteFooter from '../components/SiteFooter'
 import ContactSection from '../components/ContactSection'
+import Seo from '../components/Seo'
+import { IconBolt, IconTarget, IconUsers } from '../components/icons'
 import { specialties as specialtyPages } from '../data/specialties'
 import { mapsUrl, formLink } from '../data/site'
-import frontGym from '../../../img/Image-1-5.jpeg'
-import galleryOne from '../../../img/Image-1-5.jpeg'
-import galleryTwo from '../../../img/Image-6.jpeg'
-import galleryThree from '../../../img/Image-5.jpeg'
-import galleryFour from '../../../img/Image-2.jpeg'
-import galleryFive from '../../../img/image-family.jpeg'
-import gallerySix from '../../../img/image-girls.jpeg'
-import gallerySeven from '../../../img/image-dog.jpeg'
-import galleryEight from '../../../img/image-17.jpeg'
-import galleryNine from '../../../img/image-15.jpeg'
-import galleryTen from '../../../img/Image-1 (1).jpeg'
-import galleryEleven from '../../../img/Image (1).jpeg'
-import galleryTwelve from '../../../img/image-12.jpeg'
+import frontGym from '../assets/photos/image-1-5.webp'
+import galleryOne from '../assets/photos/image-1-5.webp'
+import galleryTwo from '../assets/photos/image-6.webp'
+import galleryThree from '../assets/photos/image-5.webp'
+import galleryFour from '../assets/photos/image-2.webp'
+import galleryFive from '../assets/photos/image-family.webp'
+import gallerySix from '../assets/photos/image-girls.webp'
+import gallerySeven from '../assets/photos/image-dog.webp'
+import galleryEight from '../assets/photos/image-17.webp'
+import galleryNine from '../assets/photos/image-15.webp'
+import galleryTen from '../assets/photos/image-1-01.webp'
+import galleryEleven from '../assets/photos/image-01.webp'
+import galleryTwelve from '../assets/photos/image-12.webp'
 
 const services = [
   {
@@ -43,25 +45,6 @@ const services = [
     badge: 'App + seguimiento',
     image: galleryFive,
     imageAlt: 'Seguimiento online de The Hybrid Method',
-  },
-]
-
-const groupBenefits = [
-  {
-    title: 'Grupos reducidos y atención personalizada',
-    text: 'Entrena en un entorno cercano donde el entrenador puede estar más encima de ti.',
-  },
-  {
-    title: 'Progresión real semana a semana',
-    text: 'Entrenamientos planificados con una progresión estructurada para que sigas mejorando de forma constante.',
-  },
-  {
-    title: 'Entrenamientos variados y efectivos',
-    text: 'Fuerza, acondicionamiento, movilidad y más, siempre con un propósito.',
-  },
-  {
-    title: 'Comunidad real',
-    text: 'Gente comprometida, mismo objetivo y buen ambiente en cada sesión.',
   },
 ]
 
@@ -120,10 +103,10 @@ const galleryImages = [
 ]
 
 const heroImages = [
+  { src: galleryNine, alt: 'Grupo entrenando junto en Nieto Hybrid Training Lab', badgeTitle: 'Comunidad real', badgeText: 'Gente comprometida, mismo objetivo' },
   { src: frontGym, alt: 'Vista exterior del gimnasio Nieto Hybrid Training Lab', badgeTitle: 'Grupos reducidos', badgeText: 'Trato cercano y personalizado' },
-  { src: galleryFour, alt: 'Gimnasio moderno en Marratxí, Pòrtol', badgeTitle: 'Instalaciones modernas', badgeText: 'Equipamiento completo y cuidado' },
-  { src: gallerySeven, alt: 'Ambiente motivador del centro', badgeTitle: 'Buen ambiente', badgeText: 'Comunidad cercana y motivadora' },
-  { src: galleryNine, alt: 'Espacio del gimnasio', badgeTitle: 'Espacio amplio', badgeText: 'Todo lo necesario para entrenar' },
+  { src: galleryTwelve, alt: 'Grupo de entrenamiento celebrando el entreno', badgeTitle: 'Buen ambiente', badgeText: 'Comunidad cercana y motivadora' },
+  { src: gallerySeven, alt: 'Ambiente motivador del centro', badgeTitle: 'Ambiente motivador', badgeText: 'Todo lo necesario para entrenar' },
 ]
 
 function Home() {
@@ -159,6 +142,11 @@ function Home() {
 
   return (
     <div className="page-shell">
+      <Seo
+        title="Nieto Hybrid Training Lab | Gimnasio en Marratxí, Pòrtol"
+        description="Gimnasio en Marratxí, Pòrtol con entrenamiento presencial en grupos reducidos, Programa Híbrido y The Hybrid Method 100% online. Fuerza, resistencia y acompañamiento real."
+        path="/"
+      />
       <SiteHeader />
 
       <main>
@@ -189,7 +177,15 @@ function Home() {
 
             <div className="hero-visual">
               <div className="image-frame">
-                <img key={heroImages[heroIndex].src} src={heroImages[heroIndex].src} alt={heroImages[heroIndex].alt} className="hero-fade" />
+                <img
+                  key={heroImages[heroIndex].src}
+                  src={heroImages[heroIndex].src}
+                  alt={heroImages[heroIndex].alt}
+                  className="hero-fade"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
                 <div className="image-badge">
                   <strong>{heroImages[heroIndex].badgeTitle}</strong>
                   <span>{heroImages[heroIndex].badgeText}</span>
@@ -202,16 +198,25 @@ function Home() {
         <section className="stats-bar">
           <div className="container stats-grid">
             <div>
-              <strong>Rendimiento</strong>
-              <span>Entrenamiento orientado a resultados</span>
+              <span className="stats-icon"><IconBolt /></span>
+              <p>
+                <strong>Rendimiento</strong>
+                <span>Entrenamiento orientado a resultados</span>
+              </p>
             </div>
             <div>
-              <strong>Personalizado</strong>
-              <span>Plan adaptado a ti</span>
+              <span className="stats-icon"><IconTarget /></span>
+              <p>
+                <strong>Personalizado</strong>
+                <span>Plan adaptado a ti</span>
+              </p>
             </div>
             <div>
-              <strong>Cercanía</strong>
-              <span>Atención real y cercana</span>
+              <span className="stats-icon"><IconUsers /></span>
+              <p>
+                <strong>Cercanía</strong>
+                <span>Atención real y cercana</span>
+              </p>
             </div>
           </div>
         </section>
@@ -230,7 +235,13 @@ function Home() {
                   to={`/servicios/${service.slug}/${specialtyPages[0].slug}`}
                   className="service-card service-link"
                 >
-                  <img className="service-card-image" src={service.image} alt={service.imageAlt} />
+                  <img
+                    className="service-card-image"
+                    src={service.image}
+                    alt={service.imageAlt}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span className="service-index">0{index + 1}</span>
                   <span className="service-badge">{service.badge}</span>
                   <h3>{service.title}</h3>
@@ -244,7 +255,7 @@ function Home() {
 
         <section className="section material-preview-section">
           <div className="container material-preview">
-            <img src={galleryTwo} alt="Zona de entrenamiento y material del centro" />
+            <img src={galleryTwo} alt="Zona de entrenamiento y material del centro" loading="lazy" decoding="async" />
             <div>
               <p className="eyebrow">Material del centro</p>
               <h2>Un espacio preparado para cada sesión.</h2>
@@ -278,42 +289,30 @@ function Home() {
           </div>
         </section>
 
-        <section id="grupo" className="section">
-          <div className="container">
-            <div className="section-header">
-              <p className="eyebrow">Entrenamiento en grupo</p>
-              <h2>Más que entrenar juntos, progresar juntos.</h2>
-            </div>
-
-            <div className="quad-grid">
-              {groupBenefits.map((item) => (
-                <div key={item.title} className="process-card">
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="filosofia" className="section dark-panel">
-          <div className="container">
-            <div className="section-header section-header-light">
-              <p className="motivation-eyebrow">Entrena con sentido. Avanza de verdad.</p>
+          <div className="container specialty-layout">
+            <div className="specialty-content">
+              <p className="eyebrow">Entrena con sentido. Avanza de verdad.</p>
               <h2>No hace falta matarse en el gym.</h2>
               <p className="section-subtitle">Una planificación con cabeza te lleva más lejos.</p>
+
+              <ul className="specialty-list">
+                {philosophyPoints.map((item) => (
+                  <li key={item.title}>
+                    <strong>{item.title}.</strong> {item.text}
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="process-grid">
-              {philosophyPoints.map((item, index) => (
-                <div key={item.title} className="process-card">
-                  <span className="step-number">0{index + 1}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              ))}
+            <div className="specialty-media">
+              <img
+                src={gallerySix}
+                alt="Grupo entrenando en Nieto Hybrid Training Lab"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-
           </div>
         </section>
 
@@ -361,7 +360,7 @@ function Home() {
                   onClick={() => setSelectedImage(image)}
                   aria-label={`Ver imagen: ${image.alt}`}
                 >
-                  <img src={image.src} alt={image.alt} />
+                  <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
                 </button>
               ))}
             </div>

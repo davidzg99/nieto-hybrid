@@ -1,7 +1,7 @@
-import imgFuncional from '../../../img/Image-1-7.jpeg'
-import imgCarreras from '../../../img/image-10.jpeg'
-import imgNutricion from '../../../img/image-14.jpeg'
-import imgGrupo from '../../../img/Image-1.jpeg'
+import imgFuncional from '../assets/photos/image-1-7.webp'
+import imgCarreras from '../assets/photos/image-10.webp'
+import imgNutricion from '../assets/photos/image-14.webp'
+import imgGrupo from '../assets/photos/image-1.webp'
 
 export const specialties = [
   {

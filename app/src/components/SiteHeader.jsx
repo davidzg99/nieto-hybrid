@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../../img/logo.jpg'
+import logo from '../assets/photos/logo.jpg'
 import { navLinks, formLink } from '../data/site'
 
 function SiteHeader() {

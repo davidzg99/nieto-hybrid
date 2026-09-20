@@ -1,6 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import SiteHeader from '../components/SiteHeader'
 import SiteFooter from '../components/SiteFooter'
+import Seo from '../components/Seo'
 import { specialties, getSpecialtyBySlug } from '../data/specialties'
 import { serviceFormats, getFormatBySlug } from '../data/services'
 import { formLink } from '../data/site'
@@ -22,6 +23,11 @@ function ServicePage() {
 
   return (
     <div className="page-shell">
+      <Seo
+        title={`${specialty.title} | ${serviceFormat.title} | Nieto Hybrid Training Lab`}
+        description={activeSection.intro}
+        path={`/servicios/${format}/${specialtySlug}`}
+      />
       <SiteHeader />
 
       <main>
@@ -71,7 +77,13 @@ function ServicePage() {
             </div>
 
             <div className="specialty-media">
-              <img src={serviceFormat.image} alt={serviceFormat.imageAlt} />
+              <img
+                src={specialty.image}
+                alt={specialty.imageAlt}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
             </div>
           </div>
         </section>

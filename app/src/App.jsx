@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
-import ServicePage from './pages/ServicePage'
-import EquipmentPage from './pages/EquipmentPage'
 import { specialties } from './data/specialties'
+
+const ServicePage = lazy(() => import('./pages/ServicePage'))
+const EquipmentPage = lazy(() => import('./pages/EquipmentPage'))
 
 function FormatIndexRedirect() {
   const { format } = useParams()
@@ -69,13 +70,15 @@ function App() {
     <>
       <ScrollToTop />
       <ScrollReveal />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/material" element={<EquipmentPage />} />
-        <Route path="/servicios/:format" element={<FormatIndexRedirect />} />
-        <Route path="/servicios/:format/:specialty" element={<ServicePage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/material" element={<EquipmentPage />} />
+          <Route path="/servicios/:format" element={<FormatIndexRedirect />} />
+          <Route path="/servicios/:format/:specialty" element={<ServicePage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Suspense>
     </>
   )
 }
