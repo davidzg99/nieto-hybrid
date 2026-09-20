@@ -21,10 +21,54 @@ function ScrollToTop() {
   return null
 }
 
+function ScrollReveal() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
+
+    const elements = document.querySelectorAll(
+      '.section-header, .service-card, .process-card, .review-card, .gallery-item, .equipment-card, .material-preview, .contact-grid, .specialty-content, .specialty-media',
+    )
+
+    document.documentElement.classList.add('motion-ready')
+    elements.forEach((element, index) => {
+      element.classList.add('scroll-reveal')
+      element.style.setProperty('--reveal-delay', `${Math.min((index % 4) * 70, 210)}ms`)
+    })
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return
+
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        })
+      },
+      { threshold: 0.12 },
+    )
+
+    elements.forEach((element) => observer.observe(element))
+
+    return () => {
+      observer.disconnect()
+      document.documentElement.classList.remove('motion-ready')
+      elements.forEach((element) => {
+        element.classList.remove('scroll-reveal', 'is-visible')
+        element.style.removeProperty('--reveal-delay')
+      })
+    }
+  }, [pathname])
+
+  return null
+}
+
 function App() {
   return (
     <>
       <ScrollToTop />
+      <ScrollReveal />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/material" element={<EquipmentPage />} />

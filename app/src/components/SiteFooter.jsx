@@ -1,6 +1,7 @@
 import logo from '../../../img/logo.jpg'
 import { IconInstagram, IconWhatsApp } from './icons'
 import { mapsUrl, instagramCenterLink, instagramProLink, contactEmail, whatsappLink } from '../data/site'
+import { specialties } from '../data/specialties'
 
 function SiteFooter() {
   return (
@@ -22,10 +23,9 @@ function SiteFooter() {
 
         <div className="footer-column">
           <h3>Especialidades</h3>
-          <p>Entrenamiento funcional</p>
-          <p>Fuerza y acondicionamiento</p>
-          <p>Hyrox y resistencia</p>
-          <p>Grupos reducidos</p>
+          {specialties.map((specialty) => (
+            <p key={specialty.slug}>{specialty.title}</p>
+          ))}
         </div>
       </div>
 
