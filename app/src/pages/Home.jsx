@@ -345,9 +345,9 @@ function Home() {
           </div>
         </section>
 
-        <section id="galeria" className="section">
+        <section id="galeria" className="section dark-panel">
           <div className="container">
-            <div className="section-header">
+            <div className="section-header section-header-light">
               <p className="eyebrow">Galería</p>
               <h2>Más que un gimnasio: un espacio para entrenar y crecer.</h2>
             </div>

@@ -12,17 +12,17 @@ import imageTreadmillAndKettlebells from '../../../img/Image-1 (1).jpeg'
 const equipment = [
   {
     category: 'Cardio y resistencia',
-    title: 'Remoergómetros',
-    text: 'Máquinas de remo para trabajar la resistencia, la potencia y los intervalos de acondicionamiento.',
+    title: 'Ergómetros',
+    text: 'Zona de ergómetros con SkiErg, remo y Airbike para trabajar resistencia, potencia e intervalos de acondicionamiento.',
     image: imageRowers,
-    alt: 'Remoergómetros del centro Nieto Hybrid Training Lab',
+    alt: 'Ergómetros del centro Nieto Hybrid Training Lab',
   },
   {
-    category: 'Cardio y resistencia',
-    title: 'SkiErg',
-    text: 'Trabajo específico de tracción y resistencia para completar sesiones híbridas y de acondicionamiento.',
+    category: 'Material funcional',
+    title: 'Trineo, wallballs y cajones',
+    text: 'Material para empujes y arrastres, lanzamientos y trabajo pliométrico dentro de sesiones funcionales e híbridas.',
     image: imageRoom,
-    alt: 'Zona de cardio con SkiErg y remoergómetros',
+    alt: 'Trineo, wallballs y cajones del centro',
   },
   {
     category: 'Cardio y resistencia',
@@ -43,7 +43,7 @@ const equipment = [
   {
     category: 'Fuerza',
     title: 'Jaula y estructura multifunción',
-    text: 'Estructuras de entrenamiento con barras, soportes y anclajes para trabajar fuerza y movimientos gimnásticos.',
+    text: 'Estructuras con barras, soportes y anclajes para TRX y anillas, pensadas para fuerza y movimientos gimnásticos.',
     image: imageRig,
     alt: 'Estructura multifunción con barra y anillas',
   },

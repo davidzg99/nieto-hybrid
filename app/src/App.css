@@ -852,6 +852,10 @@ a {
   transform: scale(1.03);
 }
 
+.dark-panel .gallery-item {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
